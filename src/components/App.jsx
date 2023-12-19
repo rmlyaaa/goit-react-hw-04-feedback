@@ -37,12 +37,14 @@ export const App = () => {
     return 100;
   };
 
-  const options = ['good', 'neutral', 'bad'];
   return (
     <>
       <GlobalStyled />
       <Section title={'Please leave feedback'}>
-        <FeedbackOptions options={options} onLeaveFeedback={onLeaveFeedback} />
+        <FeedbackOptions
+          options={Object.keys({ good, neutral, bad })}
+          onLeaveFeedback={onLeaveFeedback}
+        />
       </Section>
 
       <Section title={'Statistics'}>
